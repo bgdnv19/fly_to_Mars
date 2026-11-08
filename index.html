@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Полет на Марс</title>
+    <link rel="stylesheet" href="style.css">
+    <script  defer src="main.js"></script>
+</head>
+<body>
+    <div class="container">
+        <form id="mars-form" class="mars-form">
+            <h1>Заявка на экскурсионный полёт на Марс</h1>
+            
+            <!-- ФИО блок -->
+            <fieldset>
+                <legend>Личные данные</legend>
+                
+                <div class="form-group">
+                    <label for="surname">Фамилия <span class="required">*</span></label>
+                    <input type="text" id="surname" placeholder="Иванов">
+                    <div class="error-message" id="surname-error"></div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="name">Имя <span class="required">*</span></label>
+                    <input type="text" id="name" placeholder="Иван">
+                    <div class="error-message" id="name-error"></div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="patronymic">Отчество</label>
+                    <input type="text" id="patronymic" placeholder="Иванович">
+                </div>
+                
+                <div class="form-group">
+                    <label for="surname-lat">Фамилия латиницей <span class="required">*</span></label>
+                    <input type="text" id="surname-lat" placeholder="Ivanov">
+                    <div class="error-message" id="surname-lat-error"></div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="name-lat">Имя латиницей <span class="required">*</span></label>
+                    <input type="text" id="name-lat" placeholder="Ivan">
+                    <div class="error-message" id="name-lat-error"></div>
+                </div>
+                
+                <div class="form-group">
+                    <label>Дата рождения <span class="required">*</span></label>
+                    <div class="date-group">
+                        <select id="birth-day">
+                            <option value="">День</option>
+                            <option value="1">1</option><option value="2">2</option><option value="3">3</option>
+                            <option value="4">4</option><option value="5">5</option><option value="6">6</option>
+                            <option value="7">7</option><option value="8">8</option><option value="9">9</option>
+                            <option value="10">10</option><option value="11">11</option><option value="12">12</option>
+                            <option value="13">13</option><option value="14">14</option><option value="15">15</option>
+                            <option value="16">16</option><option value="17">17</option><option value="18">18</option>
+                            <option value="19">19</option><option value="20">20</option><option value="21">21</option>
+                            <option value="22">22</option><option value="23">23</option><option value="24">24</option>
+                            <option value="25">25</option><option value="26">26</option><option value="27">28</option>
+                            <option value="29">29</option><option value="30">30</option><option value="31">31</option>
+                        </select>
+                        <select id="birth-month">
+                            <option value="">Месяц</option>
+                            <option value="1">Январь</option><option value="2">Февраль</option>
+                            <option value="3">Март</option><option value="4">Апрель</option>
+                            <option value="5">Май</option><option value="6">Июнь</option>
+                            <option value="7">Июль</option><option value="8">Август</option>
+                            <option value="9">Сентябрь</option><option value="10">Октябрь</option>
+                            <option value="11">Ноябрь</option><option value="12">Декабрь</option>
+                        </select>
+                        <select id="birth-year">
+                            <option value="">Год</option>
+                        </select>
+                    </div>
+                    <div class="error-message" id="birth-error"></div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="marital-status">Семейное положение <span class="required">*</span></label>
+                    <select id="marital-status">
+                        <option value="">Выберите вариант</option>
+                        <option value="married">В браке</option>
+                        <option value="single">Холост/Не замужем</option>
+                        <option value="divorced">Разведён/Разведена</option>
+                        <option value="widowed">Вдовец/Вдова</option>
+                    </select>
+                    <div class="error-message" id="marital-error"></div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="education">Образование <span class="required">*</span></label>
+                    <select id="education">
+                        <option value="">Выберите образование</option>
+                        <option value="secondary">Среднее</option>
+                        <option value="secondary-special">Среднее специальное</option>
+                        <option value="bachelor">Бакалавр</option>
+                        <option value="master">Магистр</option>
+                        <option value="phd">Кандидат наук</option>
+                        <option value="doctor">Доктор наук</option>
+                    </select>
+                    <div class="error-message" id="education-error"></div>
+                </div>
+            </fieldset>
+            
+            <!-- Контактная информация -->
+            <fieldset>
+                <legend>Контактная информация</legend>
+                
+                <div class="form-group">
+                    <label for="phone">Моб. телефон <span class="required">*</span></label>
+                    <input type="tel" id="phone" placeholder="+7 (999) 123-45-67">
+                    <div class="error-message" id="phone-error"></div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Электронная почта <span class="required">*</span></label>
+                    <input type="email" id="email" placeholder="ivan@example.com">
+                    <div class="error-message" id="email-error"></div>
+                </div>
+            </fieldset>
+            
+            <!-- Чекбокс согласия -->
+            <div class="checkbox-group">
+                <label class="checkbox-label">
+                    <input type="checkbox" id="agreement">
+                    Ставя эту галочку, я подтверждаю, что поставил её в трезвом уме и твёрдой памяти.
+                </label>
+                <div class="error-message" id="agreement-error"></div>
+            </div>
+            
+            <button type="submit" class="submit-btn">Отправить заявку</button>
+        </form>
+    </div>
+    
+    <script src="main.js"></script>
+</body>
+</html>
+</body>
+</html>

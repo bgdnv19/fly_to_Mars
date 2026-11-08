@@ -1,0 +1,153 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(135deg, rgb(155, 154, 207) 23%, rgb(82, 182, 94) 48%, rgb(235, 208, 242) 72%);
+    min-height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 40px 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.mars-form {
+    background: white;
+    border-radius: 15px;
+    padding: 40px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.mars-form h1 {
+    text-align: center;
+    color: #e74c3c;
+    margin-bottom: 30px;
+    font-size: 28px;
+}
+
+fieldset {
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 30px;
+}
+
+legend {
+    padding: 0 15px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #2c3e50;
+    width: auto;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #333;
+}
+
+.required {
+    color: #e74c3c;
+}
+
+input, select {
+    width: 100%;
+    padding: 10px 12px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+input:focus, select:focus {
+    outline: none;
+    border-color: #3498db;
+}
+
+input.error, select.error {
+    border-color: #e74c3c;
+}
+
+.date-group {
+    display: flex;
+    gap: 10px;
+}
+
+.date-group select {
+    flex: 1;
+}
+
+.error-message {
+    color: #e74c3c;
+    font-size: 12px;
+    margin-top: 5px;
+    display: none;
+}
+
+.error-message.show {
+    display: block;
+}
+
+.checkbox-group {
+    margin: 25px 0;
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-weight: normal;
+}
+
+.checkbox-label input {
+    width: auto;
+    margin-right: 10px;
+    transform: scale(1.2);
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 14px;
+    background: linear-gradient(135deg, #e74c3c, #c0392b);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.submit-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(231, 76, 60, 0.4);
+}
+
+.submit-btn:active {
+    transform: translateY(0);
+}
+
+@media (max-width: 600px) {
+    .mars-form {
+        padding: 20px;
+    }
+    
+    .date-group {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .date-group select {
+        width: 100%;
+    }
+}
